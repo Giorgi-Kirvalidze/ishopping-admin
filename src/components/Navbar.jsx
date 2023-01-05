@@ -16,12 +16,9 @@ const Navbar = () => {
         <li
           className="relative"
           onClick={() => setDropdownActive((prevState) => !prevState)}
+          onBlur={() => setDropdownActive((prevState) => !prevState)}
         >
-          <Link
-            className="flex  items-center"
-            to="/"
-            onBlur={() => setDropdownActive((prev) => !prev)}
-          >
+          <Link className="flex  items-center" to="/">
             <span>დამატება</span>
             <IoMdArrowDropdown />
           </Link>
