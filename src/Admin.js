@@ -1,9 +1,15 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import './index.css'
+import { Route, Routes } from 'react-router-dom';
+
+import Home from './pages/Home';
+import './index.css';
+import Users from './pages/Users';
 const Admin = () => {
   return (
-    <Navbar/>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/users" element={<Users />} />
+    </Routes>
   );
 };
 
